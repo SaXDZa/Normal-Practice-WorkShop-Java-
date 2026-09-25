@@ -1,6 +1,8 @@
 public class Main {
     static void main() {
         Funciones misFunciones = new Funciones();
-        misFunciones.punto3();
+        misFunciones.point4contar (52456);
+
+        System.out.println( misFunciones.point4contar (52456));
     }
 }
