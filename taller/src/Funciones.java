@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class Funciones {
     Scanner sc = new Scanner(System.in); // Creo el lector
-    void punto1y2(){
+
+    void punto1y2() {
 
         System.out.println("Please, Enter the name"); //Se pide un dato al usuario
 
@@ -16,7 +17,8 @@ public class Funciones {
 
 
     }
-    void punto3(){ //Dar un numero y que arroje el cuadrado
+
+    void punto3() { //Dar un numero y que arroje el cuadrado
 
         System.out.println("Ingresa un numero"); //Pido un dato ("Numero) al usuario
 
@@ -25,37 +27,43 @@ public class Funciones {
         System.out.println("El cuadrado del numero es" + "=" + numero * numero);
 
     }
-    static int point2Sumar(int n){//Suma de los números del 1 al N
-        if(n == 1){
-            return 1;
-        }
-            int resultado = point2Sumar (n-1) + n;
-            return resultado;
 
-        }
-    static int point1Factorial(int n){
-        if(n == 0){
+    static int point2Sumar(int n) {//Suma de los números del 1 al N
+        if (n == 1) {
             return 1;
         }
-        int resultado = point1Factorial (n-1) * n;
+        int resultado = point2Sumar(n - 1) + n;
+        return resultado;
+
+    }
+
+    static int point1Factorial(int n) { //Factorial de un Numero
+        if (n == 0) {
+            return 1;
+        }
+        int resultado = point1Factorial(n - 1) * n;
         return resultado;
     }
-    static int point3Potencia(int base, int exponente){
+
+    static int point3Potencia(int base, int exponente) { //Potencia de un Numero
         if (exponente == 0) {
             return 1;
         }
-        return base * point3Potencia(base,exponente - 1);
+        return base * point3Potencia(base, exponente - 1);
     }
-    static int point4contar(int n) {
+
+    static int point4contar(int n) { //Contar digitos de un numero
         if (n < 10) {
             return 1;
         }
         int cuentahastaelMomento = 1 + point4contar(n / 10);
         return cuentahastaelMomento;
     }
-    static String point5InvertirCadena(String cadena){
-        if cadena.length() <= 1 {
-                return cadena:
+
+    static String point5InvertirCadena(String cadena) { //Invertir una cadena
+        if (cadena.length() <= 1) {
+            return cadena;
+        }
+        return point5InvertirCadena(cadena.substring(1)) + cadena.charAt(0);
     }
-        return point5InvertirCadena(cadena.substring(1 + ))
 }
